@@ -15,6 +15,7 @@
   "dependencies": {
     "@agility/content-sync": "^0.1.10",
     "dotenv": "^8.2.0",
+    "eleventy": "^1.0.6",
     "moment": "^2.29.1",
     "truncate-html": "^1.0.3"
   }
