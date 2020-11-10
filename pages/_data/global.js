@@ -26,7 +26,8 @@ async function getAgilityContent() {
 		navigation,
 		globalHeader,
 		globalFooter,
-		isPreview
+		isPreview,
+		test : JSON.stringify(globalHeader)
 	}
 }
 
