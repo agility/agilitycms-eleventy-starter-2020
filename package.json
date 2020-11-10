@@ -1,0 +1,20 @@
+{
+  "name": "agility-cms-11ty-blog",
+  "version": "1.0.0",
+  "description": "A blog with 11th with content from Agility CMS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node agility/agility.build.js preview",
+    "build": "node agility/agility.build.js live",
+    "start": "eleventy --input=pages --serve --watch",
+    "cms-clear": "node agility/agility.sync.js clear",
+    "cms-sync": "node agility/agility.sync.js sync"
+  },
+  "author": "Joel Varty",
+  "license": "ISC",
+  "dependencies": {
+    "@agility/content-sync": "^0.1.10",
+    "dotenv": "^8.2.0",
+    "truncate-html": "^1.0.3"
+  }
+}

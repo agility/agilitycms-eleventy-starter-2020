@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} - My Eleventy Site</title>
+    <meta charset="UTF-8"/>
+	<meta name="description" content="{{page.seo.metaDescription}}"/>
+    {% if page.seo.ogImage %}
+		<meta property="og:image" content={page.seo.ogImage} />
+    {% endif %}
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tailwindcss/ui@latest/dist/tailwind-ui.min.css">
+	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </head>
+  <body>
+	{% include "./shared/header.njk" %}
+
+	{% include page.templateFileName + ".njk" %}
+  </body>
+</html>

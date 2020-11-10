@@ -1,0 +1,10 @@
+{# Loop all the zones #}
+{% for zone, modules in page.zones %}
+	{# Only render the current zone name #}
+	{% if zone === zoneName %}
+		{% for module in  modules  %}
+			{# Render the module based on the module reference name  -ignoring missing module files... #}
+			{% include  "../modules/" + module.module.toLowerCase() + ".njk"  ignore missing %}
+		{% endfor %}
+	{% endif %}
+{% endfor %}
