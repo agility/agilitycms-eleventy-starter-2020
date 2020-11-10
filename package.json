@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development eleventy --input=pages",
-    "build": "NODE_ENV=production eleventy --input=pages",
+    "build": "NODE_ENV=production node agility/agility.sync.js sync && eleventy --input=pages",
     "start": "NODE_ENV=development eleventy --input=pages --serve --watch",
     "cms-clear": "node agility/agility.sync.js clear",
-    "cms-pull": "node agility/agility.sync.js sync"
+    "cms-pull": "NODE_ENV=development node agility/agility.sync.js sync"
   },
   "author": "Joel Varty",
   "license": "ISC",

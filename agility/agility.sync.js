@@ -46,8 +46,10 @@ if (process.argv[2]) {
 		//run the sync
 		return new Promise(async (resolve,reject) => {
 
-			await  runSync(true)
-			await  runSync(false)
+			const isPreview = process.env.NODE_ENV === "development"
+
+			await  runSync(isPreview)
+
 
 		});
 
