@@ -16,7 +16,7 @@ const agilityConfig = {
 
 const getSyncClient = ({ isPreview }) => {
 
-	let cachePath = `.agility/content-sync/cache/${isPreview ? 'preview' : 'live'}`
+	let cachePath = `node_modules/@agility/content-sync/cache/${isPreview ? 'preview' : 'live'}`
 
 	const apiKey = isPreview ? agilityConfig.previewAPIKey : agilityConfig.fetchAPIKey
 
