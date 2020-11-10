@@ -1,11 +1,15 @@
-const { getSyncClient } = require('../../agility/agility.config')
+const { getSyncClient, agilityConfig } = require('../../agility/agility.config')
 const truncate  = require('truncate-html')
 
 async function getAgilityContent() {
 
-	const languageCode = "en-us"
-	const syncClient = getSyncClient({isPreview:true})
+	const languageCode = agilityConfig.languageCode
+	const isPreview = agilityConfig.isPreviewMode
+
+	const syncClient = getSyncClient({isPreview})
 	let posts = await syncClient.store.getContentList({ referenceName: "posts", languageCode })
+
+	if (! posts) return {}
 
     return posts.map(p => {
 

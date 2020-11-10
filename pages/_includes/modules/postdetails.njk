@@ -1,0 +1,25 @@
+{% set post = page.dynamicPageItem.fields %}
+{% set category = post.category.fields %}
+{% set author = post.author.fields %}
+
+
+
+<section class="my-6">
+	<div class="flex">
+		<div class="text-4xl sm:text-5xl font-black tracking-wide text-center text-gray-900 mb-10">
+			{{post.title}}
+		</div>
+	</div>
+	<div class="text-center">
+		<div class="font-medium text-primary-700">{{ category.title }}</div>
+		<div class="font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide">{{author.name}}</div>
+		<div class="">{{ page.dynamicPageItem.dateStr }}</div>
+		<div class="text-gray-700">{{ page.dynamicPageItem.tagNames }}</div>
+		<div class="my-2">
+			<img class="rounded" src="{{ post.image.url }}?w=1024" alt="{{ post.image.label }}" />
+		</div>
+		<div class="text-left p-10 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-full" style="max-width:100%">
+			{{ post.content | safe }}
+		</div>
+	</div>
+</section>

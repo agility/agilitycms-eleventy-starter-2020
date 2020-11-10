@@ -4,12 +4,14 @@ const agilityFileSystem = require("@agility/content-sync/src/store-interface-fil
 
 require('dotenv').config()
 
+
 const agilityConfig = {
 	guid: process.env.AGILITY_GUID,
 	fetchAPIKey: process.env.AGILITY_API_FETCH_KEY, //Set your fetch apikey here
 	previewAPIKey: process.env.AGILITY_API_PREVIEW_KEY, //set your preview apikey
-	languageCode: 'en-us', //the language for your website in Agility CMS
-	channelName: 'website', //the name of your channel in Agility CMS
+	languageCode: process.env.AGILITY_LANGUAGE_CODE,  //the language for your website in Agility CMS
+	channelName: process.env.AGILITY_CHANNEL_NAME, //the name of your channel in Agility CMS
+	isPreviewMode: process.env.NODE_ENV === "development"
 }
 
 const getSyncClient = ({ isPreview }) => {
