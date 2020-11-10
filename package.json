@@ -4,14 +4,17 @@
   "description": "A blog with 11th with content from Agility CMS",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development node agility/agility.sync.js sync && NODE_ENV=development eleventy --input=pages",
-    "build": "NODE_ENV=production node agility/agility.sync.js sync && eleventy --input=pages",
-    "start": "NODE_ENV=development node agility/agility.sync.js sync && NODE_ENV=development eleventy --input=pages --serve --watch",
+	"predev": "NODE_ENV=development node agility/agility.sync.js sync",
+    "dev": "NODE_ENV=development eleventy --input=pages",
+	"prebuild": "NODE_ENV=production node agility/agility.sync.js sync",
+	"build": "eleventy --input=pages",
+	"prestart": "NODE_ENV=development node agility/agility.sync.js sync",
+    "start": "NODE_ENV=development eleventy --input=pages --serve --watch",
     "cms-clear": "node agility/agility.sync.js clear",
     "cms-pull": "NODE_ENV=development node agility/agility.sync.js sync"
   },
   "author": "Joel Varty",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@agility/content-sync": "^0.1.10",
