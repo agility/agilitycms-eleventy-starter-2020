@@ -13,6 +13,7 @@ async function getAgilityContent() {
 		console.log("Agility CMS => Building site in live mode.")
 	}
 
+
     const syncClient = getSyncClient({isPreview})
 
 	let sitemap = await syncClient.store.getSitemap({ channelName, languageCode })
