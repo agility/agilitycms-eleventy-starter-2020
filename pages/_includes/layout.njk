@@ -3,6 +3,7 @@
   <head>
     <title>{{ page.title }} - My Eleventy Site</title>
     <meta charset="UTF-8"/>
+	<meta name="cms" content="Agility CMS" />
 	<meta name="description" content="{{page.seo.metaDescription}}"/>
     {% if page.seo.ogImage %}
 		<meta property="og:image" content="{{page.seo.ogImage}}" />
@@ -14,6 +15,9 @@
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
   <body>
+	{% if global.isPreview %}
+		{% include "./agility/preview-bar.njk" %}
+	{% endif %}
 	{% include "./shared/header.njk" %}
 
 	{% include page.templateFileName + ".njk" %}

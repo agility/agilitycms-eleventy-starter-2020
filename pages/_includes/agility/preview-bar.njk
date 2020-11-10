@@ -1,0 +1,40 @@
+<!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+<div class="bg-indigo-600"
+	x-data="{ open: true }"
+	x-show="open"
+	x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="transform scale-y-0"
+    x-transition:enter-end="transform scale-y-100"
+    x-transition:leave="transition ease-in duration-300"
+    x-transition:leave-start="transform scale-y-100"
+    x-transition:leave-end="transform scale-y-0">
+  <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between flex-wrap">
+      <div class="w-0 flex-1 flex items-center">
+        <span class="flex p-2 rounded-lg bg-indigo-800">
+         <img src="https://static.agilitycms.com/brand/agility-triangle-yellow.svg" alt="" class="w-5" />
+        </span>
+        <p class="ml-3 font-medium text-white truncate">
+          <span class="md:hidden">
+            Agility CMS - Preview Mode
+          </span>
+          <span class="hidden md:inline">
+            Agility CMS - Y'all are in Preview Mode
+          </span>
+        </p>
+      </div>
+
+      <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+        <button @click="open = false" type="button" class="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:bg-indigo-500 sm:-mr-2 transition ease-in-out duration-150" aria-label="Dismiss">
+          <!-- Heroicon name: x -->
+          <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

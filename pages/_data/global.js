@@ -20,10 +20,13 @@ async function getAgilityContent() {
 
 	let navigation = nestedSitemap.filter(n => n.visible.menu)
 
+
+
 	return {
 		navigation,
 		globalHeader,
-		globalFooter
+		globalFooter,
+		isPreview
 	}
 }
 
