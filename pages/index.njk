@@ -1,10 +1,11 @@
 ---
 pagination:
-    data: pages
+    data: agilitypages
     size: 1
-    alias: page
-permalink: "{{ page.sitemapNode.path }}/"
-layout: layout.njk
+    alias: agilitypage
+	addAllPagesToCollections: true
+permalink: "{{ agilitypage.sitemapNode.path }}/"
+layout: page-layout.njk
 ---
 
 

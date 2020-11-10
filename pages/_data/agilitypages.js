@@ -32,7 +32,7 @@ async function getAgilityContent() {
 		}
 
 		//get the page for this sitemap object
-		let page = await syncClient.store.getPage({pageID: node.pageID, languageCode, contentLinkDepth: 3})
+		let agilitypage = await syncClient.store.getPage({pageID: node.pageID, languageCode, contentLinkDepth: 3})
 
 
 		//the first page in the sitemap is always the home page
@@ -40,24 +40,24 @@ async function getAgilityContent() {
 			node.path = "/"
 		}
 
-		page.sitemapNode = node;
+		agilitypage.sitemapNode = node;
 
 		//resolve the page template
-		if (page.templateName !== undefined && page.templateName) {
-			page.templateFileName = `${page.templateName.replace(/ /ig, '-').toLowerCase()}`
+		if (agilitypage.templateName !== undefined && agilitypage.templateName) {
+			agilitypage.templateFileName = `${agilitypage.templateName.replace(/ /ig, '-').toLowerCase()}`
 		}
 
 
 		//if this is a dynamic page item, get the content for it
-		page.dynamicPageItem = null
+		agilitypage.dynamicPageItem = null
 		if (node.contentID !== undefined && node.contentID > 0) {
 			const dynamicPageItem = await syncClient.store.getContentItem({ contentID: node.contentID, languageCode, contentLinkDepth: 2 })
 
 
 			if (dynamicPageItem) {
-				page.title = dynamicPageItem.fields.title
+				agilitypage.title = dynamicPageItem.fields.title
 				if (dynamicPageItem.seo) {
-					page.seo.metaDescription = dynamicPageItem.seo.metaDescription
+					agilitypage.seo.metaDescription = dynamicPageItem.seo.metaDescription
 				}
 
 				if (dynamicPageItem.properties.definitionName === "Post") {
@@ -66,17 +66,17 @@ async function getAgilityContent() {
 					dynamicPageItem.dateStr =  moment(dynamicPageItem.fields.date).format("ll")
 
 					if (dynamicPageItem.fields.image) {
-						page.seo.ogImage =  `${dynamicPageItem.fields.image.url}?w=1024`
+						agilitypage.seo.ogImage =  `${dynamicPageItem.fields.image.url}?w=1024`
 					}
 				}
 
-				page.dynamicPageItem = dynamicPageItem
+				agilitypage.dynamicPageItem = dynamicPageItem
 
 			}
 
 		}
 
-		pages.push(page)
+		pages.push(agilitypage)
 
 	}
 

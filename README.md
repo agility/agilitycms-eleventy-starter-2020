@@ -72,7 +72,7 @@ Now let's take a look at how the templating works.
 
 Each page uses the `layout.njk` template for the main html output.
 
-Then, based on the `page.templateFileName` property, we load a `.njk` template file dynamically.  In this case we only have the `main-template.njk` file.
+Then, based on the `agilitypage.templateFileName` property, we load a `.njk` template file dynamically.  In this case we only have the `main-template.njk` file.
 
 In that template, we set the zoneName parameter and render the modules in the `MainContentZone` zone.
 
@@ -83,7 +83,7 @@ Hopefully, you can use the examples in this project to create your own modules.
 A well-thought-out project with useful modules can empower your content editors with a set of building blocks for creating and updates the pages of your website.
 
 ### Collections
-This project is a blog template, so we have set of pages that are rendered based on the `Posts` list.  Most of that is configured as a Dynamic Page in Agility CMS, so you don't have to do much to implement it, but you'll notice on the `modules/postdetails.njk` file that we use a property called `page.dynamicPageItem`.  That object represents the Blog Post that we are currently rendering.
+This project is a blog template, so we have set of pages that are rendered based on the `Posts` list.  Most of that is configured as a Dynamic Page in Agility CMS, so you don't have to do much to implement it, but you'll notice on the `modules/postdetails.njk` file that we use a property called `agilitypage.dynamicPageItem`.  That object represents the Blog Post that we are currently rendering.
 
 ## CSS + JavaScript
 

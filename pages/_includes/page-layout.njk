@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }} - {{global.globalHeader.fields.siteName}}</title>
+    <title>{{ agilitypage.title }} - {{global.globalHeader.fields.siteName}}</title>
     <meta charset="UTF-8"/>
 	<meta name="cms" content="Agility CMS" />
-	<meta name="description" content="{{page.seo.metaDescription}}"/>
-    {% if page.seo.ogImage %}
-		<meta property="og:image" content="{{page.seo.ogImage}}" />
+	<meta name="description" content="{{agilitypage.seo.metaDescription}}"/>
+    {% if agilitypage.seo.ogImage %}
+		<meta property="og:image" content="{{agilitypage.seo.ogImage}}" />
     {% endif %}
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
@@ -20,6 +20,6 @@
 	{% endif %}
 	{% include "./shared/header.njk" %}
 
-	{% include page.templateFileName + ".njk" %}
+	{% include agilitypage.templateFileName + ".njk" %}
   </body>
 </html>

@@ -1,0 +1,6 @@
+---
+permalink: _redirects
+---
+{%- for redirect in redirects %}
+{{ redirect.originUrl }}	{{ redirect.destinationUrl }}
+{%- endfor %}

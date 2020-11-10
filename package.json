@@ -4,11 +4,11 @@
   "description": "A blog with 11th with content from Agility CMS",
   "main": "index.js",
   "scripts": {
-	"predev": "NODE_ENV=development node agility/agility.sync.js sync",
+    "predev": "NODE_ENV=development node agility/agility.sync.js sync",
     "dev": "NODE_ENV=development eleventy --input=pages",
-	"prebuild": "NODE_ENV=production node agility/agility.sync.js sync",
-	"build": "eleventy --input=pages",
-	"prestart": "NODE_ENV=development node agility/agility.sync.js sync",
+    "prebuild": "NODE_ENV=production node agility/agility.sync.js sync",
+    "build": "eleventy --input=pages",
+    "prestart": "NODE_ENV=development node agility/agility.sync.js sync",
     "start": "NODE_ENV=development eleventy --input=pages --serve --watch",
     "cms-clear": "node agility/agility.sync.js clear",
     "cms-pull": "NODE_ENV=development node agility/agility.sync.js sync"

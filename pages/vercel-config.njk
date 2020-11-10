@@ -1,0 +1,10 @@
+---
+permalink: vercel.json
+---
+{
+"redirects": [
+{%- for redirect in redirects %}
+	{ "source": "{{ redirect.originUrl }}",  "destination": "{{ redirect.destinationUrl }}" }
+{%- endfor %}
+]
+}

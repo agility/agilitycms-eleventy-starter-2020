@@ -1,4 +1,4 @@
-{% set post = page.dynamicPageItem.fields %}
+{% set post = agilitypage.dynamicPageItem.fields %}
 {% set category = post.category.fields %}
 {% set author = post.author.fields %}
 
@@ -13,8 +13,8 @@
 	<div class="text-center">
 		<div class="font-medium text-primary-700">{{ category.title }}</div>
 		<div class="font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide">{{author.name}}</div>
-		<div class="">{{ page.dynamicPageItem.dateStr }}</div>
-		<div class="text-gray-700">{{ page.dynamicPageItem.tagNames }}</div>
+		<div class="">{{ agilitypage.dynamicPageItem.dateStr }}</div>
+		<div class="text-gray-700">{{ agilitypage.dynamicPageItem.tagNames }}</div>
 		<div class="my-2 flex justify-center">
 			<img class="rounded" src="{{ post.image.url }}?w=1024" alt="{{ post.image.label }}" />
 		</div>
