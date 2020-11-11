@@ -1,3 +1,4 @@
+
 [
-	{ "src": "/home",  "dest": "/", "status": 302 }
+	{ "src": "/home",  "headers": { "Location": "/" }, "status": 301 }
 ]

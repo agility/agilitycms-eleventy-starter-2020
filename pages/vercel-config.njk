@@ -1,9 +1,9 @@
 ---
-permalink: "../.vercel_build_output/config/routes.jsonX"
+permalink: "../.vercel_build_output/config/routes.json"
 ---
 {# THIS ISN'T CURRENTLY WORKING FOR VERCEL REDIRECTS... #}
 [
 {%- for redirect in redirects %}
-	{ "src": "{{ redirect.originUrl }}",  "dest": "{{ redirect.destinationUrl }}", "status": 301 }
+	{ "src": "{{ redirect.originUrl }}",  "headers": { "Location": "{{ redirect.destinationUrl }}" }, "status": 301 }
 {%- endfor %}
 ]
