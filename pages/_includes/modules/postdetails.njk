@@ -15,8 +15,8 @@
 		<div class="font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide">{{author.name}}</div>
 		<div class="">{{ agilitypage.dynamicPageItem.dateStr }}</div>
 		<div class="text-gray-700">{{ agilitypage.dynamicPageItem.tagNames }}</div>
-		<div class="my-2 flex justify-center">
-			<img class="rounded" src="{{ post.image.url }}?w=1024" alt="{{ post.image.label }}" />
+		<div class="my-2 flex items-center justify-center">
+			<img class="rounded" src="{{ post.image.url }}?w=1024" alt="{{ post.image.label }}" loading="lazy" />
 		</div>
 	</div>
 	<div class="p-10 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-full" style="max-width:100%">

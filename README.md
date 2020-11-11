@@ -45,10 +45,10 @@ If you want to run the project **locally in preview mode**, with a  hot-reloadin
 This is the entire reason for being for 11ty.
 
 #### Preview Mode
-`npm dev` or `yarn dev`
+`npm run dev` or `yarn dev`
 
 #### Live or Production Mode
-`npm build` or `yarn build`
+`npm run build` or `yarn build`
 
 ### Wipe The Content 🧽
 This example is using the Agility CMS Sync SDK.  That content is cached in the node_modules folder. If you want to clear all that out, use this.
