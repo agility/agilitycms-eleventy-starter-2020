@@ -1,6 +1,4 @@
 
-{
-"routes": [
-	{ "source": "/home",  "destination": "/" }
+[
+	{ "src": "/home",  "dest": "/", "status": 302 }
 ]
-}

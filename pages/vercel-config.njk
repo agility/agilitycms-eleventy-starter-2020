@@ -2,10 +2,8 @@
 permalink: "../.vercel_build_output/config/routes.json"
 ---
 {# THIS ISN'T CURRENTLY WORKING FOR VERCEL REDIRECTS... #}
-{
-"routes": [
+[
 {%- for redirect in redirects %}
-	{ "source": "{{ redirect.originUrl }}",  "destination": "{{ redirect.destinationUrl }}" }
+	{ "src": "{{ redirect.originUrl }}",  "dest": "{{ redirect.destinationUrl }}", "status": 301 }
 {%- endfor %}
 ]
-}
