@@ -1,3 +1,0 @@
-[
-	{ "src": "/home",  "headers": { "Location": "/" }, "status": 302 }
-]
