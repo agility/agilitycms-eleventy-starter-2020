@@ -1,4 +1,3 @@
-
 [
 	{ "src": "/home",  "dest": "/", "status": 302 }
 ]
