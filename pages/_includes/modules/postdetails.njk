@@ -16,7 +16,13 @@
 		<div class="">{{ agilitypage.dynamicPageItem.dateStr }}</div>
 		<div class="text-gray-700">{{ agilitypage.dynamicPageItem.tagNames }}</div>
 		<div class="my-2 flex items-center justify-center">
-			<img class="rounded" src="{{ post.image.url }}?w=1024" alt="{{ post.image.label }}" loading="lazy" />
+			<picture class="rounded">
+				<source srcset="{{ post.image.url }}?w=1024"
+						media="(min-width: 1400px)">
+					<source srcset="{{ post.image.url }}?w=700"
+						media="(min-width: 1000px)">
+				<img class="rounded" src="{{ post.image.url }}?w=400" alt="{{ post.image.label }}" loading="lazy"/>
+			</picture>
 		</div>
 	</div>
 	<div class="p-10 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-full" style="max-width:100%">

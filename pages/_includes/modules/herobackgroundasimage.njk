@@ -43,8 +43,13 @@
     </div>
   </div>
   <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-
-    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ item.backgroundImage.url }}?q=60&w=1200" alt="{{ item.backgroundImage.label }}" loading="lazy">
+	<picture class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full">
+		<source srcset="{{ item.backgroundImage.url }}?q=60&w=1200"
+				media="(min-width: 1400px)">
+			<source srcset="{{ item.backgroundImage.url }}?q=60&w=800"
+				media="(min-width: 1000px)">
+		<img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ item.backgroundImage.url }}?q=60&w=500" alt="{{ item.backgroundImage.label }}" loading="lazy"/>
+	</picture>
   </div>
 </section>
 
