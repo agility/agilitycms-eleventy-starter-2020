@@ -3,6 +3,6 @@ permalink: "../.vercel_build_output/config/routes.json"
 ---
 [
 {%- for redirect in redirects %}
-	{ "src": "{{ redirect.originUrl }}",  "headers": { "Location": "{{ redirect.destinationUrl }}" }, "status": 301 }
+	{ "src": "{{ redirect.originUrl }}",  "headers": { "Location": "{{ redirect.destinationUrl }}" }, "status": 301 }{{ redirect.comma }}
 {%- endfor %}
 ]

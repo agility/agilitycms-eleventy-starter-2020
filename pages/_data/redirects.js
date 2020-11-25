@@ -24,19 +24,21 @@ async function getAgilityContent() {
 			if (i === 0) {
 				lst.push({
 					originUrl: node.path,
-					destinationUrl: "/"
+					destinationUrl: "/",
+					comma: ","
 				})
 			}
 
 			if (node.redirect && node.redirect.url) {
-console.log(node)
+
 				//link pages...
 				let redirectUrl = node.redirect.url;
 				if (redirectUrl.indexOf("~/") == 0) redirectUrl = redirectUrl.substring(1);
 
 				lst.push({
 					originUrl: node.path,
-					destinationUrl: redirectUrl
+					destinationUrl: redirectUrl,
+					comma: ","
 				})
 			}
 			++i;
@@ -52,10 +54,13 @@ console.log(node)
 
 			lst.push({
 				originUrl,
-				destinationUrl: destUrl
+				destinationUrl: destUrl,
+				comma: ","
 			})
 		});
 	}
+
+	lst[lst.length - 1].comma = ""
 
 	return lst
 }
