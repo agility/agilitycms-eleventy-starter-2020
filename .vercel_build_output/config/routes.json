@@ -1,4 +1,3 @@
 [
-	{ "src": "/home",  "headers": { "Location": "/" }, "status": 301 },
-	{ "src": "/a-random-redirect",  "headers": { "Location": "/about" }, "status": 301 }
+	{ "src": "/home",  "headers": { "Location": "/" }, "status": 301 }
 ]
