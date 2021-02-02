@@ -7,6 +7,7 @@
 		"clean:cms": "node agility/agility.sync.js clear",
 		"clean:files": "del dist",
 		"dev:cms": "NODE_ENV=development node agility/agility.sync.js sync",
+
 		"dev:assets": "NODE_ENV=development webpack",
 		"dev:11ty": "NODE_ENV=development eleventy",
 		"build:cms": "NODE_ENV=production node agility/agility.sync.js sync",
@@ -14,6 +15,7 @@
 		"build:11ty": "eleventy ",
 		"start:assets": "NODE_ENV=development webpack --watch",
 		"start:11ty": "NODE_ENV=development eleventy --serve --watch",
+
 		"clean": "run-p clean:* --print-label",
 		"dev": "run-s clean:files dev:* --print-label",
 		"start": "npm-run-all clean:files dev:cms --parallel start:*",
