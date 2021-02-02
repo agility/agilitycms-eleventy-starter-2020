@@ -1,5 +1,5 @@
 const { getSyncClient, agilityConfig } = require('../../agility/agility.config')
-const moment = require("moment")
+const luxon = require("luxon")
 
 async function getAgilityContent() {
 
@@ -63,7 +63,7 @@ async function getAgilityContent() {
 				if (dynamicPageItem.properties.definitionName === "Post") {
 
 					dynamicPageItem.tagNames = dynamicPageItem.fields.tags.map(p => p.fields.title).join(",")
-					dynamicPageItem.dateStr =  moment(dynamicPageItem.fields.date).format("ll")
+					dynamicPageItem.dateStr =  luxon.DateTime.fromISO(dynamicPageItem.fields.date).toFormat("LLLL dd, yyyy")
 
 					if (dynamicPageItem.fields.image) {
 						agilitypage.seo.ogImage =  `${dynamicPageItem.fields.image.url}?w=1024`
