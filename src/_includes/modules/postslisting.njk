@@ -25,6 +25,7 @@
           <a class="flex" href="/blog/{{ post.fields.slug }}">
             <div class="flex-shrink-0">
               <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+			  	{% image post.fields.image.url, post.fields.image.label, "(min-width: 30em) 50vw, 100vw" %}
 				<img class="h-12 w-12 rounded-md" src="{{post.fields.image.url}}?w=50&h=50" alt="{{ post.fields.image.label }}" loading="lazy"/>
               </div>
             </div>
