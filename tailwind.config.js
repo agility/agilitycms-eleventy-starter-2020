@@ -1,14 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
+// tailwind.config.js
 module.exports = {
+	purge: [
+	  './src/**/*.njk'
+	],
 	theme: {
-	  extend: {
-		fontFamily: {
-			sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-		  },
-	  }
+
 	},
-	variants: {},
 	plugins: [
 		require('@tailwindcss/typography'),
 	]
