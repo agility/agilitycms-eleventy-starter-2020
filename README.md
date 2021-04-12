@@ -5,8 +5,9 @@ This is a sample Eleventy starter site that uses Agility CMS and aims to be a fo
 This is going to be fun!  Let's go!
 
 ### Agility CMS Account
-The first thing you need is a free Agility CMS account. [You can get that here 👋](https://manager.agilitycms.com/org/subscriptions/instance-setup?template=blog-with-nextjs&plan=agility-free).
-Since this 11ty starter is so ✨new✨, we don't have an Official Starter package for it, so for now, we're linking to our NextJS starter, which happens to have the right demo content for this 🧐.
+The first thing you need is a free Agility CMS account. [You can get that here 👋](https://manager.agilitycms.com/org/subscriptions/instance-setup?template=blog-with-eleventy&plan=agility-free).
+
+Go ahead and create your account and a new project, then come back here...
 
 ### Clone the Repo
 
